@@ -35,6 +35,7 @@ public class Solution {
             if (element == 'M'){
                 digitalDate += M;
             }
+            
         }
         System.out.println(digitalDate);
     }
