@@ -19,16 +19,15 @@ public class RomanToNumber {
         return -1;
     }
 
-    int romanToDecimal(String romanNumber) {
+    public int romanToDecimal(String romanNumber) {
         int digitNumber = 0;
-
         for (int i = 0; i < romanNumber.length(); i++)
         {
             int s1 = value(romanNumber.charAt(i));
             if (i + 1 < romanNumber.length()) {
                 int s2 = value(romanNumber.charAt(i + 1));
                 if (s1 >= s2) {
-                    digitNumber = digitNumber + s1;
+                    digitNumber += s1;
                 } else {
                     digitNumber = digitNumber + s2 - s1;
                     i++;
