@@ -21,8 +21,7 @@ public class RomanToNumber {
 
     public int romanToDecimal(String romanNumber) {
         int digitNumber = 0;
-        for (int i = 0; i < romanNumber.length(); i++)
-        {
+        for (int i = 0; i < romanNumber.length(); i++) {
             int s1 = value(romanNumber.charAt(i));
             if (i + 1 < romanNumber.length()) {
                 int s2 = value(romanNumber.charAt(i + 1));
@@ -33,7 +32,7 @@ public class RomanToNumber {
                     i++;
                 }
             } else {
-                digitNumber = digitNumber + s1;
+                digitNumber += s1;
                 i++;
             }
         }
