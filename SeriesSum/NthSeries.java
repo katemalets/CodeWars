@@ -13,7 +13,7 @@ public class NthSeries {
             sum = sum + 1 / (three * i + one);
         }
         sum = sum - 1;
-        sum = Math.round(sum * 100)/100.0d;
+        sum = Math.round(sum * 100)/100.0d; //round for #.##
         String result = Double.toString(sum);
         return result;
     }
