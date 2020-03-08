@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CountNumberOfDuplicates {
     public static void main(String[] args) {
-        String string = "abacada";
+        String string = "abaccbcada";
         char[] elements = string.toCharArray();
         Arrays.sort(elements);
         System.out.println(elements);
