@@ -23,14 +23,10 @@ public class HighestAndLowest {
         for(String element : number){
             int i = Integer.parseInt(element);
             if (i > tmpmax){
-                tmp = i;
-                i = tmpmax;
-                tmpmax = tmp;
+                tmpmax = i;
             }
             if (i < tmpmin){
-                tmp = i;
-                i = tmpmin;
-                tmpmin = tmp;
+                tmpmin = i;
             }
         }
         String maximum = Integer.toString(tmpmax);
