@@ -19,7 +19,6 @@ public class HighestAndLowest {
             int i = Integer.parseInt(element);
             tmpmax = i;
         }
-        int tmp;
         for(String element : number){
             int i = Integer.parseInt(element);
             if (i > tmpmax){
