@@ -4,15 +4,22 @@ import java.math.BigInteger;
 
 public class PerimetrOfSquares {
     public static void main(String[] args) {
-        System.out.println(perimeter(7));
+        System.out.println(perimeter(BigInteger.valueOf(30)));
     }
 
-    public static int perimeter(int n) {
-        int tmp = 1;
-        for (int i = 1; i <= n; i++) {
-            //1 + 1 + 2 + 3 + 5 + 8
-            tmp += (i - 1) * i;
+    public static BigInteger perimeter(BigInteger n) {
+        int newN = n.intValue();
+        int firstElement = 1;
+        int secondElement = 1;
+        int sum = 0;
+        int result = 0;
+        for (int i = 0; i < newN; i++) {
+            sum = firstElement + secondElement;
+            firstElement = secondElement;
+            secondElement = sum;
+            result += firstElement;
         }
-        return tmp * (n - 1);
+        BigInteger res = BigInteger.valueOf((result + 1) * 4);
+        return res;
     }
 }
